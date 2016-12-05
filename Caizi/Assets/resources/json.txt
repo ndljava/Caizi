@@ -1,0 +1,21 @@
+//HELP|HTTP_GET_JSON 获取服务器端配置的字库| http://218.245.6.131/cardgame/gamecall.php?pmethod=system::help&key=HTTP_GET_JSON&type=json
+var pos:String="p/2016/FEG/100/0/100";
+// p_t_s_x_y_z()=="p/2016/FEG/100/0/100";
+var data:Array=HTTP_GET_JSON({
+        "pmethod":"system::get_excel",
+        "sheet":"1",
+        "format":"2",
+        "excel":"apps/过河拆桥/字库/1级字库.xlsx"
+        //"excel":"AssetBundles/Android/"+p_t_s_x_y_z()+"/配置/1级字库.xlsx"
+        //"excel":"AssetBundles/Android/p/2016/FEG/100/0/100/配置/1级字库.xlsx"
+    },false);
+//invoke2("recordExceptionLog","1级字库="+json_encode(data));
+/*
+var data:Array=[
+    { "id":1,"字库":"过" },
+    { "id":2,"字库":"河" }
+];
+*/
+set_var("1级字库",data);
+
+Debug.Log("set_var:1级字库"+json_encode(data));

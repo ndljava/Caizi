@@ -1,0 +1,29 @@
+﻿[
+    {
+        "ID":"1",
+        "idiom_correct":"刻舟求剑",
+        "idiom_error1":"逆水行舟",
+        "idiom_error2":"溯流求源",
+        "idiom_error3":"挥剑成河",
+        "idiom_error4":"风雨同舟",
+        "idiom_error5":"琴心剑胆"
+    },
+    {
+        "ID":"2",
+        "idiom_correct":"东倒西歪",
+        "idiom_error1":"1_1_2",
+        "idiom_error2":"1_2_2",
+        "idiom_error3":"1_3_2",
+        "idiom_error4":"1_4_2",
+        "idiom_error5":"1_5_2"
+    },
+    {
+        "ID":"3",
+        "idiom_correct":"眼高手低",
+        "idiom_error1":"1_1_3",
+        "idiom_error2":"1_2_3",
+        "idiom_error3":"1_3_3",
+        "idiom_error4":"1_4_3",
+        "idiom_error5":"1_5_3"
+    }
+]
