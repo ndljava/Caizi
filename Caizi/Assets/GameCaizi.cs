@@ -33,14 +33,13 @@ public class GameCaizi : MonoBehaviour
 
 	private void loadInit ()
 	{
+		NetManager.instanse ().send ("GuessIdioms_Idioms_001", loadComplete, 1);
+		NetManager.instanse ().send ("GuessIdioms_Level_003", loadComplete, 1);
+		NetManager.instanse ().send ("GuessIdioms_Settings_004", loadComplete, 1);
+		NetManager.instanse ().send ("GuessIdioms_Words_002", loadComplete, 1);
+		NetManager.instanse ().send ("zuma_compute_005", loadComplete, 1);
 
-		//NetManager.instanse ().send ("GuessIdioms_Idioms_001", loadComplete);
-		//NetManager.instanse ().send ("GuessIdioms_Level_003", loadInit);
-		//NetManager.instanse ().send ("GuessIdioms_Settings_004", loadInit);
-		//NetManager.instanse ().send("GuessIdioms_Words_002");
-		//NetManager.instanse ().send ("zuma_compute_005", loadInit);
-
-
+		/*
 		//TextAsset ta = (TextAsset)Resources.Load ("json");
 		//print (ta.text);
 		//print (Application.dataPath);
@@ -65,35 +64,57 @@ public class GameCaizi : MonoBehaviour
 		//print (al.Count); 
 		DataManger.WordsDic = al;
 
+		str = File.ReadAllText (Application.dataPath + "/resources/GuessIdioms_Settings_004.txt");
+		al = NGUIJson.jsonDecode (str) as ArrayList;
+		//al = JsonUtility.FromJson as ArrayList;
+		//print (al.Count); 
+		DataManger.SettingsDic = al;
+	s	 
+		str = File.ReadAllText (Application.dataPath + "/resources/zuma_compute_005.txt");
+		al = NGUIJson.jsonDecode (str) as ArrayList;
+		//al = JsonUtility.FromJson as ArrayList;
+		//print (al.Count); 
+		DataManger.computeDic = al;
 
-		loadComplete (null);
+		*/
+		//loadComplete (null);
 	}
 
 
 	private void loadComplete (string[] ctx)
 	{
-		/*
+		
+		 
 		string url = ctx [0];
-		string fname = url.Substring (url.LastIndexOf ('/'));
+		url=url.Substring(url.LastIndexOf ('/')+1);
+		string fname = url.Substring (0, url.LastIndexOf ('.'));
+		ArrayList al=NGUIJson.jsonDecode(ctx [1]) as ArrayList;
+
+//		print (fname);
+//		print (ctx [1]);
 
 		switch (fname) {
-			case "GuessIdioms_Idioms_001":
-				break;
-			case "GuessIdioms_Level_003":
-				break;
-			case "GuessIdioms_Settings_004":
-				break;
-			case "GuessIdioms_Words_002":
-				break;
-			case "zuma_compute_005":
-				break;
+		case "GuessIdioms_Idioms_001":
+			DataManger.IdiomsDic = al;
+			break;
+		case "GuessIdioms_Level_003":
+			DataManger.LevelDic = al;
+			break;
+		case "GuessIdioms_Settings_004":
+			DataManger.SettingsDic = al;
+			break;
+		case "GuessIdioms_Words_002":
+			DataManger.WordsDic = al;
+			break;
+		case "zuma_compute_005":
+			DataManger.computeDic = al;
+			break;
 		}
 
 		this.loadCount++;
 
-		if(this.loadCount==5)
-*/
-		Application.LoadLevelAsync ("Caizi2");
+		if (this.loadCount >= 5)
+			Application.LoadLevelAsync ("Caizi2");
 	}
 	
 	// Update is called once per frame

@@ -1,25 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main1Script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HttpGate.cs">
     <Files>
-      <File FileName="Assets\Main2Script.cs" Line="63" Column="3" />
-      <File FileName="Assets\GameCaizi.cs" Line="85" Column="3" />
-      <File FileName="Assets\Main1Script.cs" Line="51" Column="39" />
-      <File FileName="Assets\NetManager.cs" Line="22" Column="2" />
-      <File FileName="Assets\DataManger.cs" Line="14" Column="2" />
-      <File FileName="Assets\GameDataManger.cs" Line="15" Column="5" />
-      <File FileName="Assets\data\LevelInfo.cs" Line="32" Column="2" />
+      <File FileName="Assets\Main2Script.cs" Line="6" Column="2" />
+      <File FileName="Assets\GameCaizi.cs" Line="65" Column="23" />
+      <File FileName="Assets\Main1Script.cs" Line="138" Column="3" />
+      <File FileName="Assets\NetManager.cs" Line="29" Column="33" />
+      <File FileName="Assets\DataManger.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameDataManger.cs" Line="19" Column="5" />
+      <File FileName="Assets\data\LevelInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\HttpGate.cs" Line="91" Column="61" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="Caizi" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <RunToCursorBreakpoint file="E:\unityPro\Caizi\Assets\Main1Script.cs" line="137" column="3" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
