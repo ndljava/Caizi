@@ -312,17 +312,20 @@ public class Main1Script : MonoBehaviour
 		 
 		bool br = false;
 		 
-		print ("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+		 
 		while (true) {
-			print ("==================");
-			foreach (GameObject ggo in randWordTick) {
-				print ("ww:" + ggo.name);
-				print (cx + "---" + ggo.transform.localPosition.x + "---" + ggo.GetComponentInChildren<UILabel> ().width);
-				if (cx < ggo.transform.localPosition.x && cx > ggo.transform.localPosition.x + ggo.GetComponentInChildren<UILabel> ().width) {
-					br = true;
-					break; 
+			 
+			if (this.randWordTick.Count > 0) {
+				foreach (GameObject ggo in this.randWordTick) {
+					if (cx < ggo.transform.localPosition.x-10 || cx > ggo.transform.localPosition.x + ggo.GetComponentInChildren<UILabel> ().localSize.x*ggo.transform.localScale.x) {
+						br = true;
+						break; 
+					}
+
 				}
-			}
+
+			} else
+				br = true;
 
 			if (br)
 				break;
@@ -334,18 +337,23 @@ public class Main1Script : MonoBehaviour
 
 		br = false;
 		while (true) {
-			foreach (GameObject ggo in randWordTick) {
-				if (cy < ggo.transform.localPosition.y && cy > ggo.transform.localPosition.y + ggo.GetComponentInChildren<UILabel> ().height) {
-					br = true;
-					break;
+			if (this.randWordTick.Count > 0) {
+				foreach (GameObject ggo in this.randWordTick) {
+					if (cy < ggo.transform.localPosition.y-10 || cy > ggo.transform.localPosition.y + ggo.GetComponentInChildren<UILabel> ().localSize.y*ggo.transform.localScale.y) {
+						br = true;
+						break;
+					}
 				}
-			}
-
+			} else
+				br = true;
+			
 			if (br)
 				break;
 
 			cy = Random.Range (1, 180);
 		}
+
+ 		
 
 		this.randWordYTick.Add (cy);
  
